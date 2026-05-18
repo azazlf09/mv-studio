@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "id": "22c84cee-6231-4333-8ff1-0f0fcd40a42c",
+    "name": "测试",
+    "createdAt": "2026-05-15T08:10:25.500Z",
+    "updatedAt": "2026-05-15T11:30:18.159Z",
+    "schemaVersion": 1
+  },
+  "step1": {
+    "lyrics": "不敢回看\n左顾右盼不自然的暗自喜欢\n偷偷搭讪总没完地坐立难安\n试探说晚安\n多空泛又心酸\n低头呢喃\n对你的偏爱太过于明目张胆\n在原地打转的小丑伤心不断\n空空留遗憾\n多难堪又为难",
+    "mood": "伤感，单相思",
+    "elements": [
+      "青春感，孤独"
+    ],
+    "characterRefs": [
+      {
+        "id": "yNV_MNij",
+        "filename": "character-yNV_MNij.jpg",
+        "label": "角色参考图1"
+      }
+    ],
+    "faceAnalysis": {
+      "face_shape": "未提供",
+      "skin_tone": "未提供",
+      "temperament_tags": []
+    },
+    "concepts": [
+      {
+        "id": 1,
+        "theme_name": "方案 1",
+        "style_direction": "",
+        "makeup": "",
+        "hairstyle": "",
+        "outfit": "",
+        "accessories": "",
+        "scene_atmosphere": "",
+        "color_palette": [],
+        "overall_description": "",
+        "ai_image_prompt": "超高清电影级胶片质感画面,柯达portra400色调,颗粒细腻,日系青春写真风格,16岁清纯少女半身肖像,鹅蛋脸瓷白肌肤,杏仁形深褐瞳眸微微低垂目光偏向窗外,鼻梁挺直小巧鼻头,粉调花瓣唇微抿带怅然神情,清淡平直眉,纯黑空气刘海碎发,慵懒高位丸子头鬓角碎发垂落颈侧,白色棉质圆领校服衬衫领口微敞,深蓝色百褶裙背带,胸前别一枚生锈的小铜质姓名牌,手中攥着一封未寄出的对折信纸边缘起毛,指尖微微泛白,身体侧坐于木质单人课桌,头轻倚臂弯,空旷高中教室内,黑板残留粉笔字迹,后排课桌空无一人椅子倒扣,窗外操场遥远传来奔跑剪影模糊,六月放学后金色夕阳穿过老式百叶窗洒入,光柱里漂浮微尘,墙面爬满下午四点半的橙红光斑,空气中弥漫单相思的孤独与青春涩感,蝉鸣预告夏天将至,逆光剪影勾勒侧脸绒毛,中焦85mm镜头,浅景深背景虚化柔焦,胸口以上半身构图,微仰角度,氛围伤感静谧"
+      },
+      {
+        "id": 2,
+        "theme_name": "方案 2",
+        "style_direction": "",
+        "makeup": "",
+        "hairstyle": "",
+        "outfit": "",
+        "accessories": "",
+        "scene_atmosphere": "",
+        "color_palette": [],
+        "overall_description": "",
+        "ai_image_prompt": "超清写实人像摄影,富士胶片reala色调略带冷蓝调,雨季忧郁写真风,17岁清秀少女全身斜侧站立,瓷白冷调肌肤被雨雾打湿微闪光泽,杏仁眼睫毛挂细密水珠,深褐瞳孔倒映对面街道霓虹光斑,挺直鼻梁鼻尖微红,饱满唇色淡粉略带颤抖,纯黑碎齿空气刘海被雨水打湿贴额头,松散低丸子头鬓角凌乱垂落锁骨,身穿米白色oversize针织开衫内搭白色棉质短袖T恤,浅蓝水洗直筒牛仔长裤微微卷边,白色帆布鞋沾湿,手持一把半透明乳白色长柄雨伞却斜斜搭在肩头未完全撑开,另一只手插入开衫口袋,身处城市老旧公交站台,绿色铁皮顶棚漏雨滴答,站牌斑驳贴满褪色广告纸,身后柏油马路积水反射霓虹倒影,远处摩托车驶过溅起水花,无其他候车人形成孤独感,夜幕初降天空灰蓝带紫,路灯刚亮起暖黄光晕被雨幕晕染,湿润空气感与青春期单相思的坐立难安交织,35mm镜头街拍视角,中远景全身构图,自然抓拍感,景深略浅前景雨丝清晰,氛围潮湿伤感"
+      },
+      {
+        "id": 3,
+        "theme_name": "方案 3",
+        "style_direction": "",
+        "makeup": "",
+        "hairstyle": "",
+        "outfit": "",
+        "accessories": "",
+        "scene_atmosphere": "",
+        "color_palette": [],
+        "overall_description": "",
+        "ai_image_prompt": "极致细腻人像摄影,索尼A7M4直出色调,暖调柔光私密氛围,日系少女居家深夜写真,16岁清纯少女蜷坐居家半身肖像,瓷感冷白肌肤在台灯下泛温润蜜桃光,杏仁眼半眯凝视手机屏幕又移开,深褐瞳眸盛满湿润水光带泪意未落,清淡平直眉略带忧愁,鼻头小巧泛粉,粉调饱满下唇被轻咬留齿痕,空气感纯黑刘海散落额前,蓬松慵懒高位丸子头碎发凌乱垂落侧颈,身穿乳白色纯棉短袖睡衣裙,领口绣极小樱桃图案,裙摆盖至大腿,薄荷绿针织短开衫披肩半敞,赤足蜷缩,手中紧握一台屏幕已暗的旧款翻盖手机,膝上摊开一本贴满便利贴的牛皮纸日记本,卧室飘窗榻榻米铺浅灰格纹软垫,身侧抱一只磨旧的米色长耳兔布偶,窗台摆一盏菠萝形暖黄小夜灯,玻璃窗外深夜十二点城市灯火稀疏,远处只有一两扇窗仍亮着,窗内一人独处无他人陪伴,墙面贴满拍立得照片其中一张被翻过背面朝外,空气里漂浮单相思的明目张胆与少女孤独心事,月光与暖灯交融斜45度侧光,50mm定焦,半身坐姿构图,浅景深背景轻微虚化,氛围温柔伤感静谧"
+      }
+    ],
+    "selectedConceptId": null
+  },
+  "step2": {
+    "costumeRefs": [
+      {
+        "id": "iqcwftvq",
+        "filename": "costume-iqcwftvq.jpg",
+        "label": "人物参考图1"
+      },
+      {
+        "id": "gU_b00ss",
+        "filename": "costume-gU_b00ss.png",
+        "label": "服装场景参考图1"
+      }
+    ],
+    "storyboards": [
+      {
+        "shot_number": 1,
+        "lyric": "不敢回看",
+        "shot_type": "中近景",
+        "camera_angle": "侧后方视角",
+        "camera_movement": "缓慢推近",
+        "scene_description": "夕阳西下的教室内，女孩坐在靠窗的课桌前，背对镜头微微侧头，似乎想回头却又不敢，肩膀微微僵住。窗外操场上同学们的身影模糊跑过。",
+        "character_description": "黑色长发挽成丸子头，碎发垂落，身穿白色短袖校服衬衫与深蓝色百褶裙，参考人物参考图1与服装场景参考图1。",
+        "lighting": "金色逆光，夕阳从窗外斜射入室，发丝泛起暖光",
+        "color_tone": "暖橘色调，怀旧胶片质感",
+        "emotion": "犹豫、压抑、暗自心动",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "3秒",
+        "index": 1,
+        "audio_ref": "演唱音频1"
+      },
+      {
+        "shot_number": 2,
+        "lyric": "左顾右盼不自然的暗自喜欢",
+        "shot_type": "近景特写",
+        "camera_angle": "平视略侧",
+        "camera_movement": "轻微手持晃动",
+        "scene_description": "教室内，女孩坐在课桌旁，眼神不自然地左右游移，假装看向黑板和窗外，实则余光偷偷瞄向画面外的某人。脸颊微红，嘴角带着藏不住的笑意。",
+        "character_description": "丸子头碎发垂落，白色校服衬衫胸前别着姓名牌，肩带斜挎书包带，参考人物参考图1与服装场景参考图1。",
+        "lighting": "侧逆光，光斑洒落在脸颊和睫毛上",
+        "color_tone": "暖黄色，柔和高光",
+        "emotion": "羞涩、不自然、暗自欢喜",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "3秒",
+        "index": 2,
+        "audio_ref": "演唱音频1"
+      },
+      {
+        "shot_number": 3,
+        "lyric": "偷偷搭讪总没完地坐立难安",
+        "shot_type": "中景",
+        "camera_angle": "正面略低角度",
+        "camera_movement": "固定镜头",
+        "scene_description": "女孩坐在课桌前，双手紧握一张被自己反复折叠的纸条，手指无意识地把玩纸角，身体微微前倾又后仰，显得焦躁不安。桌面上散落着几张被撕过的纸片。",
+        "character_description": "黑色丸子头，白色短袖校服衬衫与深蓝色百褶裙，参考人物参考图1与服装场景参考图1。",
+        "lighting": "窗光从右侧射入，制造明暗对比",
+        "color_tone": "暖橙偏怀旧",
+        "emotion": "紧张、坐立难安",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "3秒",
+        "index": 3,
+        "audio_ref": "演唱音频1"
+      },
+      {
+        "shot_number": 4,
+        "lyric": "试探说晚安",
+        "shot_type": "特写",
+        "camera_angle": "俯视手部",
+        "camera_movement": "固定",
+        "scene_description": "特写女孩低头看着手中已被撕了一角的纸条，纸条上隐约写着'晚安'两字，指尖轻轻摩挲着纸面。",
+        "character_description": "白皙的手指、修剪整齐的指甲，校服袖口，参考人物参考图1与服装场景参考图1。",
+        "lighting": "暖色侧光，光线打在纸条上，形成柔和的高光",
+        "color_tone": "金黄、温暖",
+        "emotion": "犹豫、试探",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "2秒",
+        "index": 4,
+        "audio_ref": "演唱音频1"
+      },
+      {
+        "shot_number": 5,
+        "lyric": "多空泛又心酸",
+        "shot_type": "中近景",
+        "camera_angle": "侧面",
+        "camera_movement": "缓慢横移",
+        "scene_description": "女孩侧脸贴着课桌，眼神空洞地望向窗外，操场上奔跑的同学渐渐远去，空荡荡的教室只剩她一人。",
+        "character_description": "丸子头微乱，碎发散落额前，白色校服衬衫，神情失落，参考人物参考图1与服装场景参考图1。",
+        "lighting": "逆光剪影，夕阳橘红色",
+        "color_tone": "暖中带忧郁",
+        "emotion": "空虚、心酸",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "3秒",
+        "index": 5,
+        "audio_ref": "演唱音频1"
+      },
+      {
+        "shot_number": 6,
+        "lyric": "低头呢喃",
+        "shot_type": "近景特写",
+        "camera_angle": "略仰视嘴部",
+        "camera_movement": "缓慢推近",
+        "scene_description": "女孩低头，嘴唇微微开合，似乎在无声地呢喃着什么，眼睫低垂遮住眼神。手中那张撕了一角的纸条被她举到嘴边。",
+        "character_description": "粉嫩唇色，长睫毛，白皙皮肤，校服衬衫领口，参考人物参考图1与服装场景参考图1。",
+        "lighting": "柔和金光，从右上方射入",
+        "color_tone": "暖橘金",
+        "emotion": "低语、心事重重",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "3秒",
+        "index": 6,
+        "audio_ref": "演唱音频1"
+      },
+      {
+        "shot_number": 7,
+        "lyric": "对你的偏爱太过于明目张胆",
+        "shot_type": "中景",
+        "camera_angle": "斜侧45度",
+        "camera_movement": "环绕轻推",
+        "scene_description": "女孩坐在教室一隅，眼神紧紧追随着画面外的某个身影，眼底闪着光，毫不掩饰的喜欢从眼神中流露出来。周围其他座位都空着。",
+        "character_description": "丸子头，碎发飘动，白色校服与深蓝百褶裙，参考人物参考图1与服装场景参考图1。",
+        "lighting": "暖逆光，发丝边缘镶上金边",
+        "color_tone": "温暖怀旧",
+        "emotion": "明目张胆的喜欢",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "3秒",
+        "index": 7,
+        "audio_ref": "演唱音频1"
+      },
+      {
+        "shot_number": 8,
+        "lyric": "在原地打转的小丑伤心不断",
+        "shot_type": "全景",
+        "camera_angle": "高角度俯拍",
+        "camera_movement": "缓慢旋转",
+        "scene_description": "空旷的教室里，女孩一个人坐在课桌之间，周围的课桌纸张被风吹得四散纷飞，她茫然地坐在中间，像被时间困住的人，孤独感扑面而来。",
+        "character_description": "丸子头，白色校服衬衫与深蓝色百褶裙，神情落寞，参考人物参考图1与服装场景参考图1。",
+        "lighting": "夕阳光线从大窗户洒入，形成长长的影子",
+        "color_tone": "暖橘渐冷",
+        "emotion": "孤独、自嘲、伤心",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "4秒",
+        "index": 8,
+        "audio_ref": "演唱音频1"
+      },
+      {
+        "shot_number": 9,
+        "lyric": "空空留遗憾",
+        "shot_type": "特写",
+        "camera_angle": "平视",
+        "camera_movement": "固定",
+        "scene_description": "女孩缓缓松开手指，那张被撕了一角的纸条飘落，落在桌面上，纸条上的字迹已被泪水晕开。",
+        "character_description": "白皙手指，校服袖口，参考人物参考图1与服装场景参考图1。",
+        "lighting": "柔和的逆光，光斑闪烁",
+        "color_tone": "暖中带灰",
+        "emotion": "遗憾、空落",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "3秒",
+        "index": 9,
+        "audio_ref": "演唱音频1"
+      },
+      {
+        "shot_number": 10,
+        "lyric": "多难堪又为难",
+        "shot_type": "近景",
+        "camera_angle": "正面略低",
+        "camera_movement": "缓慢拉远",
+        "scene_description": "女孩抬起头，眼眶微红，强忍着泪水，嘴角勉强扯出一抹苦笑，背景虚化的教室渐渐暗淡，只有她被夕阳余晖笼罩。",
+        "character_description": "丸子头，碎发飘动，白色校服衬衫，神情含泪又克制，参考人物参考图1与服装场景参考图1。",
+        "lighting": "夕阳最后一缕余光，画面渐暗",
+        "color_tone": "暖橘转黯淡",
+        "emotion": "难堪、为难、强忍泪水",
+        "reference_images": [
+          "人物参考图1",
+          "服装场景参考图1"
+        ],
+        "duration": "4秒",
+        "index": 10,
+        "audio_ref": "演唱音频1"
+      }
+    ]
+  }
+}

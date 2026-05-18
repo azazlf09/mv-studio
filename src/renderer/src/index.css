@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  background: #0f1115;
+  color: #e6e9ef;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+input, textarea, [contenteditable] {
+  user-select: text;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a3142; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #3b455c; }
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm border border-border bg-panel2 hover:bg-border transition disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-medium bg-accent text-bg hover:bg-yellow-400 transition disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-1.5 px-2 py-1 rounded text-sm text-ink2 hover:text-ink hover:bg-panel2 transition;
+  }
+  .input {
+    @apply w-full px-3 py-2 rounded-md bg-panel border border-border text-ink placeholder:text-ink2/60 focus:outline-none focus:border-accent transition;
+  }
+  .label {
+    @apply text-sm text-ink2 mb-1.5 block;
+  }
+  .card {
+    @apply bg-panel rounded-lg border border-border p-4;
+  }
+}
