@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { useProject, saveProject } from '../services/store'
 import ImageDropzone from '../components/ImageDropzone'
 import StoryboardTable from '../components/StoryboardTable'
-import { Clapperboard, AlertCircle, Download, FileText, FileCode } from 'lucide-react'
+import { Clapperboard, Download, FileText, FileCode } from 'lucide-react'
 import { exportTxt, exportMd } from '../services/promptRenderer'
+import FriendlyError from '../components/FriendlyError'
 
 export default function Step2Storyboard() {
   const { projectPath, data, updateData } = useProject()
@@ -167,8 +168,8 @@ export default function Step2Storyboard() {
           {generating ? '生成中…' : <><Clapperboard size={16}/> 生成分镜表</>}
         </button>
         {generating && <span className="text-xs text-ink2">已接收 {streamPreview.length} 字符…</span>}
-        {error && <span className="text-sm text-red-400 flex items-center gap-1"><AlertCircle size={14}/> {error}</span>}
       </div>
+      {error && <FriendlyError error={error} onRetry={generate} />}
 
       {generating && streamPreview && (
         <div className="card mb-4 max-h-[200px] overflow-auto text-xs font-mono text-ink2 whitespace-pre-wrap break-all">

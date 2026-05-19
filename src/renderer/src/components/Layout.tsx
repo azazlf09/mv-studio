@@ -1,5 +1,5 @@
-import { NavLink, useLocation, useNavigate } from 'react-router-dom'
-import { Home, Sparkles, Clapperboard, Settings as SettingsIcon, Save } from 'lucide-react'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { Home, Sparkles, Clapperboard, Settings as SettingsIcon, Save, HelpCircle } from 'lucide-react'
 import { useProject, saveProject } from '../services/store'
 import { useEffect, useState } from 'react'
 import clsx from 'clsx'
@@ -17,6 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const nav = useNavigate()
   const [saving, setSaving] = useState(false)
   const projectName = data?.meta?.name ?? '未打开项目'
+  const isDemo = !!projectName && projectName.includes('示例')
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -57,6 +58,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           })}
         </nav>
         <div className="ml-auto flex items-center gap-3 text-xs text-ink2">
+          <button
+            onClick={() => nav('/welcome')}
+            className="btn-ghost"
+            title="重新查看引导"
+          >
+            <HelpCircle size={14} /> 帮助
+          </button>
           {projectPath && (
             <>
               <span className="px-2 py-1 rounded bg-panel2 text-ink truncate max-w-[280px]" title={projectPath}>
@@ -76,6 +84,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           )}
         </div>
       </header>
+      {isDemo && projectPath && (
+        <div className="bg-accent/15 border-b border-accent/30 px-4 py-2 text-xs flex items-center justify-between gap-3">
+          <span className="text-accent flex items-center gap-2">
+            <Sparkles size={12} /> 这是示例项目，可随意修改 · 修改不会影响内置示例
+          </span>
+          <button
+            className="btn-ghost text-xs text-accent"
+            onClick={() => nav('/')}
+          >
+            创建自己的项目 →
+          </button>
+        </div>
+      )}
       <main className="flex-1 overflow-auto">{children}</main>
     </div>
   )

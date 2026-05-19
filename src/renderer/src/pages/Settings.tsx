@@ -13,6 +13,7 @@ type LoadedSettings = {
   customHeaders: string
   customProtocol: 'anthropic' | 'openai'
   cliPath: string
+  debugMode: boolean
 }
 
 const EMPTY: LoadedSettings = {
@@ -25,7 +26,8 @@ const EMPTY: LoadedSettings = {
   claudeCodeMode: false,
   customHeaders: '',
   customProtocol: 'openai',
-  cliPath: ''
+  cliPath: '',
+  debugMode: false
 }
 
 export default function Settings() {
@@ -37,6 +39,19 @@ export default function Settings() {
   const [savedAt, setSavedAt] = useState<number | null>(null)
   const [testing, setTesting] = useState(false)
   const [test, setTest] = useState<{ ok: boolean; message: string } | null>(null)
+  const [cliDetect, setCliDetect] = useState<{ found: boolean; version?: string; error?: string } | null>(null)
+  const [detectingCli, setDetectingCli] = useState(false)
+
+  async function detectCli() {
+    setDetectingCli(true)
+    setCliDetect(null)
+    try {
+      const r = await (window.api as any).app.detectCli(loaded.cliPath || undefined)
+      setCliDetect(r)
+    } finally {
+      setDetectingCli(false)
+    }
+  }
 
   useEffect(() => {
     window.api.settings.get().then((s: any) => {
@@ -50,7 +65,8 @@ export default function Settings() {
         claudeCodeMode: !!s.claudeCodeMode,
         customHeaders: s.customHeaders || '',
         customProtocol: s.customProtocol || 'openai',
-        cliPath: s.cliPath || ''
+        cliPath: s.cliPath || '',
+        debugMode: !!s.debugMode
       }
       setLoaded(next)
       // 猜一个 presetId：CLI 优先按 provider 匹配，否则按 baseUrl
@@ -93,7 +109,8 @@ export default function Settings() {
       claudeCodeMode: loaded.claudeCodeMode,
       customHeaders: loaded.customHeaders,
       customProtocol: loaded.customProtocol,
-      cliPath: loaded.cliPath
+      cliPath: loaded.cliPath,
+      debugMode: loaded.debugMode
     }
     if (editingKey && newKey.trim()) {
       patch.apiKey = newKey.trim()
@@ -182,12 +199,22 @@ export default function Settings() {
             </div>
             <div>
               <label className="label text-xs">CLI 路径（可选，留空走 PATH）</label>
-              <input
-                className="input font-mono text-xs"
-                placeholder="留空使用系统 PATH 中的 claude 命令"
-                value={loaded.cliPath}
-                onChange={e => setLoaded(l => ({ ...l, cliPath: e.target.value }))}
-              />
+              <div className="flex gap-2">
+                <input
+                  className="input font-mono text-xs flex-1"
+                  placeholder="留空使用系统 PATH 中的 claude 命令"
+                  value={loaded.cliPath}
+                  onChange={e => setLoaded(l => ({ ...l, cliPath: e.target.value }))}
+                />
+                <button className="btn text-xs" onClick={detectCli} disabled={detectingCli}>
+                  {detectingCli ? '检测中…' : '检测'}
+                </button>
+              </div>
+              {cliDetect && (
+                cliDetect.found
+                  ? <div className="text-xs text-emerald-300 mt-1.5">✓ 已检测到 claude v{cliDetect.version}</div>
+                  : <div className="text-xs text-red-300 mt-1.5">✗ 未检测到：{cliDetect.error}</div>
+              )}
             </div>
           </div>
         )}
@@ -322,6 +349,25 @@ export default function Settings() {
             <input className="input flex-1" value={loaded.defaultProjectsDir} readOnly placeholder="未设置" />
             <button className="btn" onClick={pickDir}><Folder size={14} /> 选择</button>
           </div>
+        </div>
+
+        {/* 调试模式 */}
+        <div className="bg-panel2/40 rounded-md p-3 border border-border/50">
+          <label className="flex items-start gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              className="mt-0.5"
+              checked={loaded.debugMode}
+              onChange={e => setLoaded(l => ({ ...l, debugMode: e.target.checked }))}
+            />
+            <div>
+              <div className="text-sm font-medium">显示开发调试面板</div>
+              <div className="text-xs text-ink2 mt-0.5">
+                右下角浮动按钮 + 底部抽屉，实时显示 AI 调用日志。常用于排查生成失败。
+                关闭时可按 <code className="bg-bg/60 px-1 rounded">Ctrl + `</code> 临时唤起。
+              </div>
+            </div>
+          </label>
         </div>
 
         {/* 操作 */}

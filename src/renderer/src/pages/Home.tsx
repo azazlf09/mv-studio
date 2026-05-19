@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useProject } from '../services/store'
-import { Plus, FolderOpen, Folder, Trash2 } from 'lucide-react'
+import { Plus, FolderOpen, Folder, Trash2, Sparkles } from 'lucide-react'
 
 type Recent = { id: string; name: string; path: string; lastOpened: string }
 
@@ -15,6 +15,7 @@ export default function Home() {
   const [newName, setNewName] = useState('')
   const [parentDir, setParentDir] = useState('')
   const [error, setError] = useState('')
+  const [demoCreating, setDemoCreating] = useState(false)
 
   useEffect(() => { reset(); refresh() }, [])
 
@@ -60,6 +61,25 @@ export default function Home() {
     refresh()
   }
 
+  async function tryDemo() {
+    setDemoCreating(true)
+    setError('')
+    try {
+      const settings: any = await window.api.settings.get()
+      const r = await window.api.app.createDemoProject(settings.defaultProjectsDir || undefined)
+      if (!r.ok || !r.projectPath) {
+        setError(r.message || '创建示例失败')
+        setDemoCreating(false)
+        return
+      }
+      setProject(r.projectPath, r.data)
+      nav('/step2')
+    } catch (e: any) {
+      setError(e?.message ?? String(e))
+      setDemoCreating(false)
+    }
+  }
+
   return (
     <div className="max-w-5xl mx-auto p-8">
       <div className="mb-8">
@@ -83,6 +103,13 @@ export default function Home() {
               </button>
               <button className="btn w-full justify-center" onClick={openByPicker}>
                 <FolderOpen size={16} /> 打开本地项目
+              </button>
+              <button
+                className="btn w-full justify-center border-accent/40 text-accent hover:bg-accent/10"
+                disabled={demoCreating}
+                onClick={tryDemo}
+              >
+                <Sparkles size={16} /> {demoCreating ? '正在创建示例…' : '试用示例项目'}
               </button>
             </div>
           ) : (
@@ -114,7 +141,22 @@ export default function Home() {
             <h2 className="text-lg font-semibold">最近项目</h2>
           </div>
           {recents.length === 0 ? (
-            <div className="text-sm text-ink2 py-8 text-center">暂无最近项目</div>
+            <div className="py-8 text-center space-y-3">
+              <div className="inline-flex w-12 h-12 rounded-full bg-panel2 items-center justify-center text-ink2">
+                <Folder size={20} />
+              </div>
+              <div className="text-sm text-ink2">还没有项目</div>
+              <div className="text-xs text-ink2/70 max-w-xs mx-auto leading-relaxed">
+                试用示例 30 秒看完整效果，或在左侧新建你自己的 MV 项目
+              </div>
+              <button
+                className="btn-primary mx-auto"
+                disabled={demoCreating}
+                onClick={tryDemo}
+              >
+                <Sparkles size={14} /> {demoCreating ? '创建中…' : '试用示例项目'}
+              </button>
+            </div>
           ) : (
             <ul className="space-y-1.5 max-h-[420px] overflow-auto">
               {recents.map(r => (

@@ -1,6 +1,6 @@
 {
   "name": "mv-studio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MV 全流程提示词制作工坊 - 服化道设计 + 专业分镜生成",
   "main": "out/main/index.js",
   "author": "MV Studio",
@@ -40,21 +40,45 @@
   "build": {
     "appId": "com.mvstudio.app",
     "productName": "MV Studio",
+    "copyright": "Copyright © 2026 MV Studio",
     "directories": {
-      "output": "release"
+      "output": "release",
+      "buildResources": "build"
     },
     "files": [
       "out/**/*",
       "package.json"
     ],
+    "asarUnpack": [
+      "**/node_modules/sharp/**/*",
+      "**/node_modules/@img/**/*"
+    ],
     "win": {
-      "target": "nsis",
-      "artifactName": "MV-Studio-Setup-${version}.${ext}"
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "MV-Studio-Setup-${version}.${ext}",
+      "publisherName": "MV Studio",
+      "requestedExecutionLevel": "asInvoker"
     },
     "nsis": {
       "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "MV Studio",
+      "uninstallDisplayName": "MV Studio - MV 提示词工坊",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "deleteAppDataOnUninstall": false
     }
   }
 }

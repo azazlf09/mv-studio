@@ -82,6 +82,10 @@ export type AppSettings = {
   customProtocol: 'anthropic' | 'openai'
   /** Claude Code CLI 专用：claude 可执行文件路径，留空走 PATH */
   cliPath: string
+  /** 是否常驻显示调试抽屉浮动按钮（普通用户默认关闭）。关闭时按 Ctrl+` 临时唤起。 */
+  debugMode: boolean
+  /** 首次启动引导是否已完成；未完成时启动 APP 会自动跳 /welcome */
+  onboardingCompleted: boolean
 }
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -93,7 +97,9 @@ export const DEFAULT_SETTINGS: AppSettings = {
   claudeCodeMode: false,
   customHeaders: '',
   customProtocol: 'openai',
-  cliPath: ''
+  cliPath: '',
+  debugMode: false,
+  onboardingCompleted: false
 }
 
 /** 预设供应商。选中后自动填好 baseUrl、推荐模型，便于一键接入。 */

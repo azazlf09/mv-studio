@@ -3,8 +3,9 @@ import { useProject, saveProject } from '../services/store'
 import TagInput from '../components/TagInput'
 import ImageDropzone from '../components/ImageDropzone'
 import ConceptCard from '../components/ConceptCard'
-import { Sparkles, ArrowRight, AlertCircle } from 'lucide-react'
+import { Sparkles, ArrowRight } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
+import FriendlyError from '../components/FriendlyError'
 
 export default function Step1Costume() {
   const nav = useNavigate()
@@ -136,7 +137,7 @@ export default function Step1Costume() {
               {progress || '调用中...'}（详情见右下角 ⌨ 调试面板）
             </div>
           )}
-          {error && <div className="flex items-start gap-2 text-sm text-red-400"><AlertCircle size={14} className="mt-0.5"/> {error}</div>}
+          {error && <FriendlyError error={error} onRetry={generate} />}
         </div>
 
         <div className="space-y-4">

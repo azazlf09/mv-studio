@@ -54,6 +54,22 @@ const api = {
     },
     getHistory: (): Promise<any[]> => ipcRenderer.invoke('debug:getHistory'),
     clear: (): Promise<{ ok: boolean }> => ipcRenderer.invoke('debug:clear')
+  },
+  app: {
+    /** 由 main 通过 globalShortcut Ctrl+` 转发：让 renderer 切换 DebugDrawer 可见性 */
+    onToggleDebugDrawer: (cb: () => void) => {
+      const h = () => cb()
+      ipcRenderer.on('app:toggle-debug-drawer', h)
+      return () => ipcRenderer.removeListener('app:toggle-debug-drawer', h)
+    },
+    /** 检测 Claude Code CLI 是否可用 */
+    detectCli: (): Promise<{ found: boolean; version?: string; path?: string; error?: string }> =>
+      ipcRenderer.invoke('app:detectCli'),
+    /** 用内置 demo 数据创建一个示例项目并返回路径 + 数据 */
+    createDemoProject: (parentDir?: string): Promise<{ ok: boolean; projectPath?: string; data?: any; message?: string }> =>
+      ipcRenderer.invoke('app:createDemoProject', parentDir),
+    /** 在系统默认浏览器打开链接 */
+    openExternal: (url: string): Promise<void> => ipcRenderer.invoke('app:openExternal', url)
   }
 }
 
