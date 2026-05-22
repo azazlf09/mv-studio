@@ -12,7 +12,7 @@ MV Studio 是一款本地 Windows 桌面 APP，专门帮你完成 MV 拍摄/AI �
 
 ## 安装
 
-下载 `MV-Studio-Setup-x.x.x.exe`，双击安装。
+去 [**Releases 页面**](https://github.com/azazlf09/mv-studio/releases) 下载最新版 `MV-Studio-Setup-x.x.x.exe`，双击安装。
 
 **首次启动会触发 Windows SmartScreen 警告**（因为安装包没做代码签名）：点「更多信息」→「仍要运行」即可。
 
